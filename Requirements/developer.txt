@@ -1,0 +1,19 @@
+#App Development
+customtkinter
+PILLOW
+datetime
+screeninfo
+
+#AI Development
+numpy
+opencv-python
+SpeechRecognition
+googletrans
+openai==0.28
+typer
+
+# Web functions development
+requests
+googlesearch-python
+beautifulsoup4
+pytube
