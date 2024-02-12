@@ -1,6 +1,7 @@
 import customtkinter as sck
 import tkinter as tk
 import screeninfo
+import keyboard
 from Scripts import (
     get_jsondata, write_monitor_info, write_userinfo
 )
@@ -14,9 +15,9 @@ hour = datetime.now().hour
 class Application_Files_Functions:
     def newfile(content):
         confirm = messagebox.askyesno('Create new document', 'Are u sure u want to create a new text document?')
-        if confirm == 'YES':
+        if confirm == TRUE:
             content.delete('1.0', 'end')
-        elif confirm == 'NO':
+        elif confirm == FALSE:
             pass
         
     def save(content): 
@@ -40,9 +41,18 @@ class Application_Files_Functions:
 class Application:
     def menubar(self, window, textentry) -> None:
         menus = tk.Menu()
+        
+        # ______Configure functions______
         FileFunctions_Class = Application_Files_Functions
         save_file, open_file = lambda: FileFunctions_Class.save(textentry), lambda: FileFunctions_Class.open_(textentry)
         newfile = lambda: FileFunctions_Class.newfile(textentry)
+        
+        def kbtrigger_filefunctions():
+            keyboard.add_hotkey('Ctrl+N', newfile)
+            keyboard.add_hotkey('Ctrl+O', open_file)
+            keyboard.add_hotkey('Ctrl+S', save_file)
+        
+        kbtrigger_filefunctions()
         
         # __________File__________
         filefunctions = Application_Files_Functions
@@ -70,7 +80,6 @@ class Application:
 
     def __init__(self)-> None:
         window = sck.CTk()
-        
         
         # ________Configuring sizes________
         text_ = Text(window, font=('Helvetica', 10))

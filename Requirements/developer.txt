@@ -2,6 +2,7 @@
 customtkinter
 PILLOW
 datetime
+keyboard
 screeninfo
 
 #AI Development

@@ -51,3 +51,7 @@ As developer, if u wanna contribute to this project advancement follow this inst
     ```
 
 ### Feel free to contribute!
+
+
+## License
+[MIT](./LICENSE.txt) 
