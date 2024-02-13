@@ -1,0 +1,14 @@
+{
+    "SYSTEM":[
+        {
+            "Type": "Software",
+            "Username": "empty",
+            "Language": "empty"
+        },
+        {
+            "Type": "Hardware",
+            "Width": 1234,
+            "Height": 456
+        }
+    ]
+}
