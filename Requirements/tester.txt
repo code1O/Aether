@@ -1,3 +1,19 @@
+#AI testing
 SpeechRecognition
 googletrans
-googlesearch-python
+opencv_python
+openai==0.28
+
+#System testing
+screeninfo
+psutil
+
+#App testing
+customtkinter
+tkinter
+datetime
+
+#Web testing
+beautifulsoup4
+requests
+googlesearch_python
