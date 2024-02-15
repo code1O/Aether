@@ -3,6 +3,7 @@ import psutil
 import urllib.request
 import json
 import screeninfo
+import platform
 
 def GetUserLanguage():
 	windll = ctypes.windll.kernel32
@@ -10,7 +11,12 @@ def GetUserLanguage():
 	return locale.windows_locale[UILang]
 
 PythonVersion = sys.version[:4]
+_StrPythonVersion = PythonVersion.replace('.', '')
 Username  = os.getenv('USERNAME')
+
+class winversion:
+    windows11 = (sys.platform == 'win32' and platform.release() == 11)
+    windows10 = (sys.platform == 'win32' and platform.release() == 10)
 
 class battery:
     def percent_as_string():

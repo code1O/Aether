@@ -1,10 +1,10 @@
 {
     "SYSTEM":[
         {
-            "Type": "Software",
-            "Username": "empty",
+            "Type": "Software", 
+            "Username": "empty", 
             "Language": "empty"
-        },
+        }, 
         {
             "Type": "Hardware",
             "Width": 1234,
